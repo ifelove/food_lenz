@@ -1,0 +1,43 @@
+.more {
+    overscroll-behavior-inline: contain;
+    grid-auto-columns: 40%;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    padding: 30px;
+    display: grid;
+    gap: 20px;
+
+    .middle {
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
+    }
+
+    #middle {
+        animation: slideshow2 45s ease-in forwards infinite;
+        height: 140px;
+    }
+
+    .more-card {
+        animation: slideshow1 70s ease-in forwards infinite;
+        @include background-size-position-repeat ("cover", "center", "no-repeat");
+        border-radius: 3px;
+        overflow: hidden;
+        position: relative;
+        transition: .3s;
+        height: 300px;
+
+        &:hover {
+            filter: brightness(.6);
+        }
+    }
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 30px;
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}

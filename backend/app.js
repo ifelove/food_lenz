@@ -27,6 +27,11 @@ app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/foods", authenticateUser, foodRoute);
 app.use("/api/v1/all-foods-item", allFoods);
 
+
+app.get("/doc", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./doc", "FoodLens.html"));
+});
+
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../frontend", "index.html"));
 });

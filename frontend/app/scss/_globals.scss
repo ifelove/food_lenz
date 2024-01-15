@@ -1,0 +1,274 @@
+/*=========================================
+General Styles
+=========================================*/
+@import "mixins";
+* {
+    font-family: 'Gill Sans', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+/*=========================================
+Color Definitions
+=========================================*/
+:root {
+    --cta: rgb(223 146 87);
+    --text: rgb(50 50 56);
+    --white: rgb(255 255 255);
+    --background-light-gray: rgb(243, 243, 245);
+    --text-color-dark: rgb(13, 13, 37);
+    --accent: rgb(78 193 254);
+}
+
+body {
+    background: var(--white);
+    overflow-x: hidden;
+    position: relative;
+}
+/*=========================================
+Dark mode/ Light mode Styles
+=========================================*/
+.dark-mode {
+    background: black;
+    color: #bca1c7e8;
+    box-shadow: none;
+}
+//index page dark-mode
+body.dark-mode .new-section .about-cards .about-card,
+body.dark-mode footer,
+body.dark-mode footer .footer li a {
+    background: rgb(0 0 0 / 58%);
+    color: #bca1c7e8;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+body.dark-mode .trust .tools .cards .card {
+    background: rgb(38 38 38 / 52%);
+}
+
+body.dark-mode .review-cards .review-card {
+    box-shadow: 1px 1px 3px rgb(153, 153, 153);
+    background: rgb(0 0 0 / 58%);
+    color: #bca1c7e8;
+}
+
+body.dark-mode #favorites .favs .fav {
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+body.dark-mode .result {
+    color: rgba(188, 161, 199, 0.9098039216);
+}
+
+
+/*=========================================
+Button Styles
+=========================================*/
+button {
+    @include Display-align-justify ("inline-flex", "center", "center");
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .62);
+    background: rgba(28, 9, 74, 0.651);
+    color: rgb(203 203 203);
+    border-radius: 30px;
+    min-width: 100px;
+    font-weight: 700;
+    overflow: hidden;
+    min-height: 40px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background: rgb(255,255,255,.1);
+    }
+
+    &::after {
+        content: '';
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        transition: .5s;
+        position: absolute;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    }
+
+    &:hover::after {
+        left: 100%;
+    }
+
+    & span {
+        position: absolute;
+        transition: .5s;
+        display: block;
+
+        &:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #fff;
+        }
+
+        &:nth-child(2) {
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 1px;
+            background: #fff;
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background: #fff;
+        }
+
+        &:nth-child(4) {
+            bottom: 0;
+            right: 0;
+            height: 0;
+            width: 1px;
+            background: #fff;
+        }
+    }
+
+    &:hover span:nth-child(1) {
+        transform: translateX(100%);
+        width: 100%;
+    }
+
+    &:hover span:nth-child(2) {
+        transform: translateY(100%);
+        height: 100%;
+    }
+
+    &:hover span:nth-child(3) {
+        transform: translateX(-100%);
+        width: 100%;
+    }
+
+    &:hover span:nth-child(4) {
+        transform: translateY(-100%);
+        height: 100%;
+    }
+
+    &:hover {
+        transform: scale(.97);
+        color: var(--cta);
+    }
+}
+
+/*=========================================
+Mobile menu Styles
+=========================================*/
+.menu-icon {
+    cursor: pointer;
+
+    span {
+        @include width-height ("26px", "2px");
+        background: var(--text-color-dark);
+        transition: transform .4s;
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}
+/*=========================================
+Menu Open Action
+=========================================*/
+.menu-open {
+
+    span:first-child {
+        transform: translateY(6px) rotate(45deg);
+        background-color: var(--cta);
+        transform-origin: 45%;
+    }
+
+    span:nth-child(2) {
+        opacity: 0;
+    }
+
+    span:last-child {
+        transform: translateY(-6px) rotate(-45deg);
+        background-color: var(--cta);
+        transform-origin: 45%;
+    }
+}
+/*=========================================
+Menu Links Action
+=========================================*/
+.nav-open {
+
+    &.mobile-menu {
+        transform: translateX(0);
+    }
+}
+/*=========================================
+Mobile menu Styles
+=========================================*/
+.mobile-menu {
+    @include width-height ("50%", "100%");
+    background: rgba(0, 0, 0, 0.39);
+    transform: translateX(500px);
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    font-size: 22px;
+    position: fixed;
+    transition: 1s;
+    z-index: 20;
+    right: 0;
+    top: 0;
+
+    ul {
+        @include Display-justify ("flex", "center");
+        @include width-height ("100%", "100%");
+        flex-direction: column;
+
+        li:last-child {
+            
+            margin-right: 30px;
+        }
+
+        li{
+            padding: 20px 0;
+            transition: .3s;
+
+            a {
+                color: var(--background-light-gray);
+                transition: .3s;
+            }
+
+            &:hover {
+                background: rgb(0 0 0 / 36%);
+                border-radius: 0 20px 20px 0;
+
+                a{
+                    color: var(--cta);
+                }
+            }
+        }
+    }
+}

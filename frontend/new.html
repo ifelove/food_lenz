@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/dashboard2.css" />
+    <link rel="stylesheet" href="css/style.css" />
+      <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+ <!--
+    ==================== Header & Nav  ====================
+    -->
+<nav>
+ 
+      <div class="nav-header">
+        <a class="logo" href="home.html"
+          ><img src="Images/logo/Logo.png" alt="Foodlens logo" />FoodLENS</a
+        >
+        <h2><span class="dashboard-heading">Dashboard</span></h2>
+
+        <ul>
+          <li>
+            <div class="account">
+              <span><p>Welcome Back,</p></span>
+              <h2 id="userName">Tristan</h2>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+     
+      </div>
+
+</nav>
+
+<!--
+    ==================== dashboard division  ====================
+    -->
+
+<main class="container">
+  <article class="side-bar">
+<div class="dash-list">
+<article class="dash-sidebar active side-link" ><i class='bx bx-detail'></i><span class="inf1 cap"><p>Profile</p></span></article>
+<article class="dash-sidebar active side-link" ><i class='bx bx-bowl-rice'></i><span class="inf1"><p>All Foods</p></span></article>
+<article class="dash-sidebar active side-link" ><i class='bx bx-home'></i><span class="inf1"><p>Home</p></span></article>
+<article class="dash-sidebar active side-link" ><i class='bx bx-cog'></i><span class="inf1"><p>Settings</p></span></article>
+</div>
+
+
+<div class="logout-container"> <i class='bx bx-exit' id="logout"></i><p class="logoutp">Logout</p> </div>
+</article>
+
+<div class="all">
+  <section class="profile-edit-page">
+    <h1 class="profile-edit-page-heading">Edit Profile</h1>
+
+    <div class="picture">
+<main class="image-section">
+<span class="img-span"><h1 class="img-span-text">EA</h1></span>
+  <form action="" class="upload">
+    <input class="default-camera-btn" type="file"   accept="image/*" hidden>
+    <i class='bx bx-camera'></i>
+  </form>
+</main>
+</div>
+<!--Edit basic information-->
+<section class="edit-basic-container">
+  <p class="edit-basic-p">Edit Basic Information</p>
+    <form action="">
+      <div class="input-flex">
+ <label for="name">Username</label>
+<input type="text" name="username" class="inpt" id="edit-userName">
+
+      </div>
+          <div class="input-flex">
+ <label for="name">Email</label>
+<input type="text" name="email" class="inpt" id="edit-email">
+
+      </div>
+          <div class="input-flex">
+ <label for="name">Diet</label>
+<input type="text" name="password" class="inpt" id="edit-diet">
+
+      </div>
+ <p class="edit-basic-p">Remove or Add  Allergens</p>
+ <div class="allergy-dom">
+ <article class="allergy-container1">
+  <p class="allergy1">Egg  <span><i class='bx bx-x' id="bx-x"></i></span></p>
+   <p class="allergy1">Diary  <span><i class='bx bx-x' id="bx-x"></i></span></p>
+    <p class="allergy1">Sea fish  <span><i class='bx bx-x' id="bx-x"></i></span></p>
+     <p class="allergy1">Breakfast  <span><i class='bx bx-x' id="bx-x"></i></span></p>
+      <p class="allergy1">Egg  <span><i class='bx bx-x' id="bx-x"></i></span></p>
+       <p class="allergy1">Sea fish  <span><i class='bx bx-x' id="bx-x"></i></span></p>
+     <p class="allergy1">Breakfast  <span><i class='bx bx-x' id="bx-x"></i></span></p>
+      <p class="allergy1">Egg  <span><i class='bx bx-x' id="bx-x"></i></span></p>
+  
+</article>
+<i class='bx bx-transfer-alt'></i>
+<div class="select-body">
+ <p class="add-allergies">Add</p>
+<select name="" id="select-allergy" class="allergy-select" onchange="selectedValue()">
+ 
+  <option value="1">Add Allergen</option>
+   <option value="2">Diary</option>
+   <option value="3">Diary</option>
+   <option value="4">Diary</option>
+   <option value="5">Diary</option>
+   <option value="6">Diary</option>
+   <option value="7">Diary</option>
+   <option value="8">Sea Fish</option>
+</select>
+</div>
+</div>
+
+ <p class="edit-basic-p">Remove or Add  Intolerance</p>
+ <div class="allergy-dom">
+ <article class="allergy-container1" id="intolerance-container1">
+  <p class="allergy1">Egg  <span><i class='bx bx-x' id="bx-x1"></i></span></p>
+   <p class="allergy1">Diary  <span><i class='bx bx-x' id="bx-x1"></i></span></p>
+    <p class="allergy1">Sea fish  <span><i class='bx bx-x' id="bx-x1"></i></span></p>
+     <p class="allergy1">Breakfast  <span><i class='bx bx-x' id="bx-x1"></i></span></p>
+      <p class="allergy1">Egg  <span><i class='bx bx-x' id="bx-x1"></i></span></p>
+       <p class="allergy1">Sea fish  <span><i class='bx bx-x' id="bx-x1"></i></span></p>
+     <p class="allergy1">Breakfast  <span><i class='bx bx-x' id="bx-x1"></i></span></p>
+      <p class="allergy1">Egg  <span><i class='bx bx-x' id="bx-x1"></i></span></p>
+  
+</article>
+<i class='bx bx-transfer-alt'></i>
+<div class="select-body">
+ <p class="add-intolerance">Add</p>
+<select name="" id="" class="allergy-select">
+ 
+  <option value="">Add Intolerance</option>
+   <option value="">Diary</option>
+   <option value="">Diary</option>
+   <option value="">Diary</option>
+   <option value="">Diary</option>
+   <option value="">Diary</option>
+   <option value="">Diary</option>
+   <option value="">Sea Fish</option>
+</select>
+</div>
+</div>
+
+<button class="save-btn">Save</button>
+    </form>
+
+    </section>
+
+    
+
+  </section>
+
+<section class="user">
+    <div class="edit-user">
+      <article class="edit-info">
+        <h2 id="userName" class="username">John</h2>
+        <p id="email">john@gmail.com</p>
+        </article>
+        <div class="flex-img"><img src="./Images/profiles/prof-1.jpg"  class="edit-img"><p class="edit-text">Edit Profile</p></div>
+    </div>
+
+
+    <div class="profile-container">
+       <h1 class="profile-heading">Profile</h1>
+       <div class="border"></div>
+   
+    <div class="profile">
+       
+        
+
+       <main class="user-intro">
+        <div class="flex-img2"><img src="./Images/profiles/prof-1.jpg"  class="profile-img"></div>
+        <article class="beside-logo">
+        <h2 id="userName1">John</h2>
+        <p id="email2">john@gmail.com</p>
+        
+    </article>
+       </main> 
+
+       <p class="info-heading">Basic Information</p>
+
+       <article class="basic-info">
+        <main class="info">
+          <p class="inf">Username</p> <p class="inf"  id="username" >John</p> 
+        </main>
+        <div class="border"></div>
+        <main class="info">
+          <p  class="inf">Email</p> <p class="inf" id="email1">john@gmail.com</p> 
+        </main>
+        <div class="border"></div>
+        <main class="info">
+          <p  class="inf">Diet</p> <p class="inf" id="diet">Veganww</p> 
+        </main>
+       </article>
+
+<p class="info-heading">Allergens</p>
+<article class="allergy-container">
+  <p class="allergy">Egg</p>
+   <p class="allergy">Diary</p>
+    <p class="allergy">Sea fish</p>
+     <p class="allergy">Breakfast</p>
+      <p class="allergy">Egg</p>
+       <p class="allergy">Sea fish</p>
+     <p class="allergy">Breakfast</p>
+      <p class="allergy">Egg</p>
+  
+</article>
+<p class="info-heading">Intolerance</p>
+<article class="allergy-container" id="intolerance">
+  <p class="allergy">Egg</p>
+   <p class="allergy">Diary</p>
+    <p class="allergy">Sea fish</p>
+     <p class="allergy">Breakfast</p>
+      <p class="allergy">Egg</p>
+       <p class="allergy">Sea fish</p>
+     <p class="allergy">Breakfast</p>
+      <p class="allergy">Egg</p>
+  
+</article>
+
+
+    </div>
+     </div>
+</section>
+</div>
+
+</main>
+
+  <!--
+    ==================== Footer & Contact  ====================
+      -->
+      <footer id="contact">
+        <div class="first-sect">
+            <div class="logo-box">
+                <a class="logo" href="#"><img src="Images/logo/Logo.png" alt="Foodlens logo">FoodLENS</a>
+                <ul class="footer mode">
+                    <li id="tt">Love our work?</li>
+                    <li>Contact us >></li>
+                    <li id="toggle-mode">Dark/Light mode</li>
+                </ul>
+            </div>
+            <ul class="footer">
+                <li>Elvis Oguoma O.</li>
+                <li><a href="https://www.linkedin.com/in/elvis-oguoma-66a77318a"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="https://www.twitter.com/r0elle"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="elvisrozy52@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
+            </ul>
+            <ul class="footer">
+                <li>Aralu Kenechukwu C.</li>
+                <li><a href="https://www.linkedin.com/in/kenechukwu-aralu-1b7238207"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="https://twitter.com/aralukene"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="junioraralu@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
+            </ul>
+            <ul class="footer">
+                <li>Aweda Ifeoluwa</li>
+                <li><a href="https://ng.linkedin.com/in/aweda-ifeoluwa-b91b9976"><button id="socials">
+                    <img src="Images/logo/linkedin.png" alt="linkedin">
+                </button>Linkedin</a></li>
+                <li><a href="https://twitter.com/LovethSir"><button id="socials">
+                    <img src="Images/logo/twitter.png" alt="twitter">
+                </button>Twitter</a></li>
+                <li><a href="ifeI1939@gmail.com"><button id="socials">
+                    <img src="Images/logo/gmail.png" alt="gmail">
+                </button>Gmail</a></li>
+            </ul>
+        </div>
+        <div class="copy_right">
+            <a href="https://github.com/Elvis-rozy/FoodLENS"><img src="/Images/logo/pngwing.com.png">Github Repository FoodLENS 2023</a>
+            <a href="#">Back to top</a>
+        </div>
+    </footer>
+ <script src="app/js/dashboard.js"></script>
+ 
+    <script src="app/js/dashboardUpdate.js"></script>
+    <script src="app/js/globals.js"></script>
+  </body>
+</html>
+

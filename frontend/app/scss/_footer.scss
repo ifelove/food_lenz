@@ -1,0 +1,119 @@
+/*==========================================
+Footer Setup
+==========================================*/
+#toggle-mode {
+    cursor: pointer;
+
+    &:hover {
+        color: var(--cta);
+    }
+}
+
+footer  {
+    background: var(--background-light-gray);
+    position: relative;
+
+    .first-sect {
+        @include Display-justify("flex", "space-evenly");
+        border-bottom: .1px solid rgb(219 219 219);
+        padding: 50px 0;
+
+        .logo-box {
+            @include Display-align-justify ("flex", "center", "space-between");
+            flex-direction: column;
+        }
+
+        #tt {
+            padding-bottom: 0;
+        }
+
+        .logo {
+            @include Display-align ("flex", "center");
+            flex-direction: column;
+            color: rgb(65 53 96);
+            padding-bottom: 20px;
+
+            img {
+                @include width-height ("70px", "50px");
+            }
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            li {
+                text-align: start;
+            }
+        }
+
+        .footer li:nth-child(1) {
+            font-size: 20px;
+            padding-bottom: 25px;
+        }
+
+        .footer li a {
+            color: var(--text);
+            transition: .4s;
+            display: flex;
+            align-items: center;
+
+            button {
+                min-width: 30px;
+                min-height: 30px;
+                border-radius: 50%;
+                margin-right: 20px;
+                box-shadow: none;
+
+                img {
+                    @include width-height("18px", "18px");
+                }
+            }
+
+            &:hover {
+                color: var(--cta);
+            }
+        }
+    }
+
+    .copy_right {
+        @include Display-align-justify("flex", "center", "space-between");
+        padding: 30px 40px;
+        color: var(--accent);
+
+        img {
+            @include width-height("30px", "30px");
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: var(--accent);
+        }
+    }
+}
+/*
+=========================================
+Mobile and Tab setup
+=========================================
+*/
+@media (max-width: 950px) {
+
+    footer {
+        .first-sect {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            .footer {
+                align-items: center;
+            }
+        }
+
+        .copy_right {
+            gap: 30px;
+            flex-direction: column;
+        }
+    }
+}

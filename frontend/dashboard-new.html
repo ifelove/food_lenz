@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+    ==================== stylesheet  ====================
+    -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="app/js/protectDashboard.js"></script>-->
+    <title>dashboard</title>
+  </head>
+  <body>
+    <!--
+    ==================== Header & Nav  ====================
+    -->
+
+    <nav>
+      <div class="nav-header">
+        <a class="logo" href="home.html"
+          ><img src="Images/logo/Logo.png" alt="Foodlens logo" />FoodLENS</a
+        >
+        <h2><span class="dashboard-heading">Dashboard</span></h2>
+
+        <ul>
+          <li>
+            <div class="account">
+              <span><i class="bx bxs-user-circle"></i></span>
+              <h2 id="userName">Tristan</h2>
+              <span><i class="bx bxs-down-arrow"></i></span>
+            </div>
+
+            <ul class="logout">
+              <li class="logout-text">Logout</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!--
+            ==================== Mobile menu Icon  ====================
+            -->
+      <div id="menu" href="" class="hide-for-desktop menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!--
+            ==================== Mobile menu Links  ====================
+            -->
+      <div class="mobile-menu hide-for-desktop">
+        <ul class="lnk">
+          <li class="hide-for-desktop lnk dashbtn">
+            <a href="home.html">Home</a>
+          </li>
+          <!--
+                -->
+          <li class="hide-for-desktop lnk Edit dashbtn">
+            <a href="#">Profile</a>
+          </li>
+          <!--
+                -->
+
+          <!--
+                -->
+          <li class="hide-for-desktop lnk dashbtn">
+            <a href="categories.html">All foods</a>
+          </li>
+          <!--
+                -->
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dash-hero prof">
+      <div class="left">
+        <img
+          class="dash-pic hide-for-desktop"
+          src="Images/profiles/profile-Hero.jpg"
+          alt="profile image"
+        />
+
+        <div class="bars">
+          <a href="#"><button class="Active dashbtn">Profile</button></a>
+          <a href="home.html"><button class="home-btn dashbtn">Home</button></a>
+          <a href="categories.html"
+            ><button class="cat-btn dashbtn">All foods</button></a
+          >
+        </div>
+      </div>
+      <main class="main-dash">
+        <h1 class="heading">Profile</h1>
+        <div class="dashboard-main">
+          <div class="middle">
+            <img src="Images/profiles/profile-Hero.jpg" alt="profile image" />
+          </div>
+          <div class="right">
+            <div class="profile-details">
+              <h3>Personal Info</h3>
+              <h5>Email</h5>
+              <p class="mail" id="email">tristan4414@gmail.com</p>
+              <h5>Bio</h5>
+              <p id="bio">
+                I'm a self motivated athlete with a keen sense of taste and
+                fairly average culinary skills.
+              </p>
+
+              <h5>Meal Preference</h5>
+              <p id="preference">
+                Non Dairy, Gluten Free, Bromate Free, Low Fat, Vegan
+              </p>
+              <h5>Allergens</h5>
+              <p id="allergens">Dairy, Peanut and Yeast</p>
+            </div>
+          </div>
+          <button class="edit">
+            <a href="dashboard-edit.html">Edit Profile</a>
+          </button>
+        </div>
+      </main>
+    </section>
+
+    <!--
+    ==================== Footer & Contact  ====================
+      -->
+    <footer id="contact">
+      <div class="first-sect">
+        <div class="logo-box">
+          <a class="logo" href="home.html"
+            ><img src="Images/logo/Logo.png" alt="Foodlens logo" />FoodLENS</a
+          >
+          <ul class="footer mode">
+            <li id="tt">Love our work? Contact us</li>
+            <li id="toggle-mode">Dark/Light mode</li>
+            <li id="logout">Log out</li>
+          </ul>
+        </div>
+        <ul class="footer">
+          <li>Elvis Oguoma O.</li>
+          <li>
+            <a href="https://www.linkedin.com/in/elvis-oguoma-66a77318a"
+              ><button id="socials">
+                <img src="Images/logo/linkedin.png" alt="linkedin" /></button
+              >Linkedin</a
+            >
+          </li>
+          <li>
+            <a href="https://www.twitter.com/r0elle"
+              ><button id="socials">
+                <img src="Images/logo/twitter.png" alt="twitter" /></button
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a href="elvisrozy52@gmail.com"
+              ><button id="socials">
+                <img src="Images/logo/gmail.png" alt="gmail" /></button
+              >Gmail</a
+            >
+          </li>
+        </ul>
+        <ul class="footer">
+          <li>Aralu Kenechukwu C.</li>
+          <li>
+            <a href="https://www.linkedin.com/in/kenechukwu-aralu-1b7238207"
+              ><button id="socials">
+                <img src="Images/logo/linkedin.png" alt="linkedin" /></button
+              >Linkedin</a
+            >
+          </li>
+          <li>
+            <a href="https://twitter.com/aralukene"
+              ><button id="socials">
+                <img src="Images/logo/twitter.png" alt="twitter" /></button
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a href="junioraralu@gmail.com"
+              ><button id="socials">
+                <img src="Images/logo/gmail.png" alt="gmail" /></button
+              >Gmail</a
+            >
+          </li>
+        </ul>
+        <ul class="footer">
+          <li>Aweda Ifeoluwa</li>
+          <li>
+            <a href="https://ng.linkedin.com/in/aweda-ifeoluwa-b91b9976"
+              ><button id="socials">
+                <img src="Images/logo/linkedin.png" alt="linkedin" /></button
+              >Linkedin</a
+            >
+          </li>
+          <li>
+            <a href="https://twitter.com/LovethSir"
+              ><button id="socials">
+                <img src="Images/logo/twitter.png" alt="twitter" /></button
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a href="ifeI1939@gmail.com"
+              ><button id="socials">
+                <img src="Images/logo/gmail.png" alt="gmail" /></button
+              >Gmail</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="copy_right">
+        &copy;Copyright FoodLENS 2023
+        <a href="#">Back to top</a>
+      </div>
+    </footer>
+    <!--
+    ==================== JavaScript File  ====================
+      -->
+
+    <script src="app/js/dashboardUpdate.js"></script>
+    <script src="app/js/dashboard.js"></script>
+    <script src="app/js/globals.js"></script>
+  </body>
+</html>

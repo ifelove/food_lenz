@@ -2,10 +2,12 @@ const User = require("../model/User");
 const { BadrequestError, Unathenticated } = require("../errors");
 const { StatusCodes } = require("http-status-codes");
 
+
 const registerUser = async (req, res) => {
   console.log(req.body);
   const user = await User.create({ ...req.body });
   const token = await user.createJWT();
+
 
   res.status(StatusCodes.OK).json({
     user: {
